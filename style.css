@@ -23,6 +23,14 @@ h1 {
   line-height: 1.4em;
 }
 
+#linha {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+
 .linha-container {
    display: flex;
      justify-content: flex-start; /* alinha à esquerda */
