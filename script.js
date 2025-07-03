@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // 1. Ativar link da página atual
+  // ---------------- link da página atual----------------
   const currentPage = window.location.pathname.split('/').pop();
   if (currentPage === 'index.html') {
     document.getElementById('work-link').classList.add('active');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('contacts-link').classList.add('active');
   }
 
-  // 2. Animação da linha (código original completo)
+  // ---------------- Animação da linha ----------------
   const svg = document.getElementById('svg');
   const linha = document.getElementById('linha');
   const originalD = linha.getAttribute('d');
@@ -155,4 +155,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', handleScroll);
   handleScroll();
+});
+
+
+// ---------------------------filtros-----------------------------
+
+document.querySelectorAll('.filter-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Atualizar botão ativo
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filtro = button.getAttribute('data-filter');
+    const projetos = document.querySelectorAll('.projeto');
+
+    projetos.forEach(projeto => {
+      if (filtro === 'all') {
+        projeto.classList.remove('hidden');
+      } else {
+        projeto.classList.toggle('hidden', !projeto.classList.contains(filtro));
+      }
+    });
+  });
 });

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <title>Portefólio Inês Marcelino</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- ------------------------- Cabeçalho ------------------------- -->
   <div class="conteudo">
     <div class="idiomas">
       <span>PT</span>
@@ -13,14 +16,15 @@
     </div>
     <h1>PORTEFÓLIO<br>INÊS MARCELINO</h1>
   </div>
-  
+
   <div class="content-wrapper">
     <div class="linha">
       <svg id="svg" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
-        <path id="linha" d="M1 299.349C32.8842 254.225 129.155 175.96 259.163 223.886C389.171 271.811 439.987 134.411 449.144 59.7205C462.273 -15.5218 518.98 -78.4297 640.78 271.877C762.58 622.184 819.067 410.999 832.086 261.617C843.008 189.243 760.528 148.489 343.231 564.462"/>
+        <path id="linha"
+          d="M1 299.349C32.8842 254.225 129.155 175.96 259.163 223.886C389.171 271.811 439.987 134.411 449.144 59.7205C462.273 -15.5218 518.98 -78.4297 640.78 271.877C762.58 622.184 819.067 410.999 832.086 261.617C843.008 189.243 760.528 148.489 343.231 564.462" />
       </svg>
     </div>
-    
+    <!-- ------------------------- Navbar ------------------------- -->
     <nav class="navbar">
       <div class="nav-item">
         <a href="index.html" class="nav-link" id="work-link">WORK</a>
@@ -32,13 +36,94 @@
         <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTS</a>
       </div>
     </nav>
-    
-    <div class="page-content">
-      <!-- Your page content goes here -->
-      <div style="height: 2000px;"></div> <!-- Temporary content for scrolling -->
+    <!-- --------------------- Botões filtro --------------------- -->
+    <div class="filtros">
+      <button class="filter-btn active" data-filter="all">TODOS</button>
+      <button class="filter-btn" data-filter="branding">BRANDING</button>
+      <button class="filter-btn" data-filter="audiovisual">AUDIOVISUAL</button>
+      <button class="filter-btn" data-filter="uxui">UX&UI</button>
+      <button class="filter-btn" data-filter="redes">REDES SOCIAIS</button>
+      <button class="filter-btn" data-filter="editorial">EDITORIAL</button>
+      <button class="filter-btn" data-filter="outros">OUTROS</button>
     </div>
+    <!-- --------------------- Grelha projetos --------------------- -->
+    <div class="grid-projetos">
+      <a href="ccdm.html" class="projeto branding">
+        <img src="img/ccdm.png" alt="Projeto 1">
+      </a>
+      <a href="centrodamoda.html" class="projeto branding">
+        <img src="img/centromoda.png" alt="Projeto 2">
+      </a>
+      <a href="souberbuddy.html" class="projeto uxui">
+        <img src="img/soberbudy.png" alt="Projeto 3">
+      </a>
+      <a href="ultimorecurso.html" class="projeto branding redes">
+        <img src="img/ultimorecurso.png" alt="Projeto 1">
+      </a>
+      <a href="cabecaoca.html" class="projeto audiovisual">
+        <img src="img/cabecaoca.png" alt="Projeto 2">
+      </a>
+      <a href="ciaac.html" class="projeto branding redes">
+        <img src="img/ciaac.png" alt="Projeto 3">
+      </a>
+
+      <a href="tapetedememorias.html" class="projeto audiovisual">
+        <img src="img/tapetedememorias.png" alt="Projeto 1">
+      </a>
+      <a href="dzainit.html" class="projeto redes">
+        <img src="img/dzainit.png" alt="Projeto 2">
+      </a>
+      <a href="thebeachhouse.html" class="projeto uxui outros">
+        <img src="img/thebeachhouse.png" alt="Projeto 3">
+      </a>
+      <a href="tictac.html" class="projeto uxui editorial">
+        <img src="img/tictac.png" alt="Projeto 1">
+      </a>
+      <a href="p3.html" class="projeto editorial uxui">
+        <img src="img/p3.png" alt="Projeto 2">
+      </a>
+      <a href="jekforms.html" class="projeto uxui">
+        <img src="img/jekforms.png" alt="Projeto 3">
+      </a>
+
+      <a href="clickthefuture.html" class="projeto redes">
+        <img src="img/clickthefuture.png" alt="Projeto 1">
+      </a>
+      <a href="acapella.html" class="projeto branding">
+        <img src="img/acapella.png" alt="Projeto 2">
+      </a>
+      <a href="theshapeofemotions.html" class="projeto outros">
+        <img src="img/shapeofemotions.png" alt="Projeto 3">
+      </a>
+      <a href="passaporte.html" class="projeto branding">
+        <img src="img/passaporte.png" alt="Projeto 1">
+      </a>
+      <a href="pontoaponto.html" class="projeto branding">
+        <img src="img/pontoaponto.png" alt="Projeto 2">
+      </a>
+      <a href="quebrajazz.html" class="projeto branding">
+        <img src="img/quebrajazz.png" alt="Projeto 3">
+      </a>
+
+      <a href="natashajen.html" class="projeto branding">
+        <img src="img/natasha.png" alt="Projeto 1">
+      </a>
+      <a href="torrealgarve.html" class="projeto audiovisual">
+        <img src="img/torre.png" alt="Projeto 2">
+      </a>
+      <a href="sddh.html" class="projeto redes">
+        <img src="img/sddh.png" alt="Projeto 3">
+      </a>
+    </div>
+
+    <!-- --------------------- footer --------------------- -->
+    <footer class="footer">
+      WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
+    </footer>
+
   </div>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>

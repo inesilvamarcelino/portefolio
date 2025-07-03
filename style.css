@@ -5,12 +5,15 @@ body {
   overflow-x: hidden;
 }
 
+/* ----------------------- cabeçalho ----------------------- */
+
 .conteudo {
   position: absolute;
   top: 3%;
   right: 3%;
   text-align: right;
-  z-index: 1;        /* Garante que fique acima da div-base */
+  z-index: 1;
+  /* Garante que fique acima da div-base */
 }
 
 .idiomas {
@@ -27,7 +30,8 @@ h1 {
 
 .content-wrapper {
   position: relative;
-  margin-top: 150px; /* Space for the initial content */
+  margin-top: 150px;
+  /* Space for the initial content */
 }
 
 .linha {
@@ -52,14 +56,15 @@ h1 {
   animation: drawLine 3s ease-out forwards;
 
 }
+
 @keyframes drawLine {
   to {
     stroke-dashoffset: 0;
   }
 }
 
+/* ----------------------- navbar ----------------------- */
 
-/* Navbar with advanced sticky effect */
 .navbar {
   display: flex;
   justify-content: center;
@@ -92,7 +97,7 @@ h1 {
 .nav-link {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   padding: 5px 0;
   transition: color 0.3s;
@@ -121,6 +126,7 @@ h1 {
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
@@ -129,4 +135,74 @@ h1 {
 .page-content {
   padding-top: 50px;
   min-height: 100vh;
+}
+
+/* ----------------------- filtros ----------------------- */
+.filtros {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  border: 2px solid black;
+  background: white;
+  padding: 8px 15px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* ----------------------- grelha dos projetos ----------------------- */
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.projeto {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.projeto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.projeto:hover img {
+  transform: scale(1.05);
+}
+
+.projeto.hidden {
+  display: none;
+}
+
+/* ----------------------- footer ----------------------- */
+
+.footer {
+  text-align: center;
+  font-size: 0.65em;
+  color: #333;
+  padding: 40px 20px 20px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
