@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // ---------------- link da página atual----------------
+  // ---------------- link da página atual
   const currentPage = window.location.pathname.split('/').pop();
   if (currentPage === 'index.html') {
     document.getElementById('work-link').classList.add('active');
@@ -156,6 +156,41 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 });
+  const navbar = document.querySelector('.navbar');
+  const stickyOffset = 150; // Mesmo valor do margin-top do content-wrapper
+  let lastScrollPosition = 0;
+  let navbarHidden = false;
+
+  function handleScroll() {
+    const currentScrollPosition = window.scrollY;
+    
+    // Comportamento sticky básico
+    if (currentScrollPosition >= stickyOffset) {
+      navbar.classList.add('sticky');
+      navbar.classList.remove('hidden');
+    } else {
+      navbar.classList.remove('sticky');
+      navbar.classList.remove('hidden');
+    }
+
+    // Esconder navbar ao descer
+    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 50) {
+      if (!navbarHidden && currentScrollPosition > stickyOffset) {
+        navbar.classList.add('hidden');
+        navbarHidden = true;
+      }
+    } else {
+      if (navbarHidden) {
+        navbar.classList.remove('hidden');
+        navbarHidden = false;
+      }
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Inicializa o estado correto
 
 
 // ---------------------------filtros-----------------------------
