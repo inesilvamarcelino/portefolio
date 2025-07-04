@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactos | Portefólio Inês Marcelino</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-title {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .services-list li {
+            margin-bottom: 8px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-details p {
+            margin: 8px 0;
+        }
+
+        .required::after {
+            content: "*";
+            color: red;
+            margin-left: 4px;
+        }
+
+        .submit-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-item">
+            <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+        </div>
+        <div class="nav-item">
+            <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+        </div>
+        <div class="nav-item">
+            <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div class="content-wrapper">
+        <div class="contact-container">
+            <!-- Formulário -->
+            <div class="contact-form">
+                <h2 class="contact-title">QUERES UM ORÇAMENTO?</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nome" class="required">NOME</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem" class="required">MENSAGEM</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+
+            <!-- Informações de Contacto -->
+            <div class="contact-info">
+                <h3>SERVIÇOS</h3>
+                <ul class="services-list">
+                    <li>Criação de logótipos</li>
+                    <li>Desenvolvimento de identidades visuais</li>
+                    <li>Design de packaging</li>
+                    <li>Design gráfico para redes sociais e impressos</li>
+                    <li>Design editorial (livros, revistas, catálogos)</li>
+                    <li>Edição e montagem de vídeo</li>
+                </ul>
+
+                <div class="contact-details">
+                    <h3>CONTACTOS</h3>
+                    <p>Fátima</p>
+                    <p>Coimbra</p>
+                    <p>ines.silva.marcelino@gmail.com</p>
+                    <p>+351 918 319 033</p>
+                    <p>LinkedIn</p>
+                    <p>Whatsapp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
+    </footer>
+
+    <!-- Script para navbar sticky -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -29,12 +29,6 @@ h1 {
   margin: 0;
 }
 
-.content-wrapper {
-  position: relative;
-  margin-top: 150px;
-  /* Space for the initial content */
-}
-
 .linha {
   width: 100%;
   height: auto;
@@ -206,4 +200,100 @@ h1 {
   padding: 40px 20px 20px;
   font-weight: 300;
   letter-spacing: 0.05em;
+}
+
+
+/* ----------------------- contactos ----------------------- */
+
+
+.contact-title {
+  font-size: 1.8em; /* Tamanho ligeiramente menor */
+  margin-bottom: 20px; /* Espaço reduzido */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-title {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.services-list li {
+    margin-bottom: 8px;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details p {
+    margin: 8px 0;
+}
+
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+.submit-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #333;
 }
