@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <title>Contactos | Portefólio Inês Marcelino</title>
@@ -94,6 +95,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -114,7 +116,7 @@
             <!-- Formulário -->
             <div class="contact-form">
                 <h2 class="contact-title">QUERES UM ORÇAMENTO?</h2>
-                <form>
+                <form action="https://formsubmit.co/ines.silva.marcelino@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="nome" class="required">NOME</label>
                         <input type="text" id="nome" name="nome" required>
@@ -127,6 +129,12 @@
                         <label for="mensagem" class="required">MENSAGEM</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                     </div>
+
+                    <!-- Impede spam bots -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Redireciona para uma página de obrigado -->
+                    <input type="hidden" name="_next" value="https://teusite.com/obrigada.html">
+
                     <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
                 </form>
             </div>
@@ -164,4 +172,5 @@
     <!-- Script para navbar sticky -->
     <script src="script.js"></script>
 </body>
+
 </html>
