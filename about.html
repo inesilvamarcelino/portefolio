@@ -1,4 +1,3 @@
-</head>
 <!DOCTYPE html>
 <html lang="pt">
 <meta charset="UTF-8">
@@ -93,6 +92,97 @@
         margin-top: 150px;
         /* Igual ao index.html */
     }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: white;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: black;
+        transition: all 0.3s ease;
+    }
+
+    /* Conteúdo principal */
+    .content-wrapper,
+    .about-container {
+        margin-top: 120px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Imagem */
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .about-main {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .about-grid {
+            gap: 40px;
+        }
+    }
 </style>
 
 
@@ -100,16 +190,27 @@
     <!-- ------------------------- Navbar ------------------------- -->
 
     <nav class="navbar">
-        <div class="nav-item">
-            <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+        <!-- Ícone hambúrguer (só aparece no mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="nav-item">
-            <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
-        </div>
-        <div class="nav-item">
-            <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+
+        <!-- Os links da navbar (visíveis no desktop e no menu mobile) -->
+        <div class="nav-links" id="navLinks">
+            <div class="nav-item">
+                <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+            </div>
+            <div class="nav-item">
+                <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+            </div>
+            <div class="nav-item">
+                <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+            </div>
         </div>
     </nav>
+
     <!-- ------------------------- sobre mim ------------------------- -->
     <div class="about-container">
         <div class="about-main">
@@ -229,7 +330,7 @@
     <footer class="footer">
         WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
     </footer>
-    
+
     <script src="script.js"></script>
 
 </body>

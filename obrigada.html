@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <title>Mensagem Enviada | Portefólio Inês Marcelino</title>
@@ -54,27 +55,32 @@
             background-color: #333;
         }
 
-        footer.footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
-            border-top: 1px solid #eee;
-        }
+        
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-item">
-            <a href="index.html" class="nav-link">TRABALHOS</a>
+        <!-- Ícone hambúrguer (só aparece no mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="nav-item">
-            <a href="about.html" class="nav-link">SOBRE MIM</a>
-        </div>
-        <div class="nav-item">
-            <a href="contacts.html" class="nav-link">CONTACTOS</a>
+
+        <!-- Os links da navbar (visíveis no desktop e no menu mobile) -->
+        <div class="nav-links" id="navLinks">
+            <div class="nav-item">
+                <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+            </div>
+            <div class="nav-item">
+                <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+            </div>
+            <div class="nav-item">
+                <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+            </div>
         </div>
     </nav>
 
@@ -91,4 +97,5 @@
     </footer>
 
 </body>
+
 </html>

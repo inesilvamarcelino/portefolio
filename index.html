@@ -2,17 +2,19 @@
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Portefólio Inês Marcelino</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
   .content-wrapper {
-  position: relative;
-  margin-top: 150px;
-  /* Space for the initial content */
-}
+    position: relative;
+    margin-top: 150px;
+    /* Space for the initial content */
+  }
 </style>
+
 <body>
   <!-- ------------------------- Cabeçalho ------------------------- -->
   <div class="conteudo">
@@ -27,109 +29,120 @@
       </svg>
     </div>
     <!-- ------------------------- Navbar ------------------------- -->
-  <div class="content-wrapper">
+    <div class="content-wrapper">
 
-    <nav class="navbar">
-      <div class="nav-item">
-        <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
-      </div>
-      <div class="nav-item">
-        <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
-      </div>
-      <div class="nav-item">
-        <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
-      </div>
-    </nav>
+      <nav class="navbar">
+        <!-- Ícone hambúrguer (só aparece no mobile) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    <!-- --------------------- Botões filtro --------------------- -->
-    <div class="filtros">
-      <button class="filter-btn active" data-filter="all">TODOS</button>
-      <button class="filter-btn" data-filter="branding">BRANDING</button>
-      <button class="filter-btn" data-filter="audiovisual">AUDIOVISUAL</button>
-      <button class="filter-btn" data-filter="uxui">UX&UI</button>
-      <button class="filter-btn" data-filter="redes">REDES SOCIAIS</button>
-      <button class="filter-btn" data-filter="editorial">EDITORIAL</button>
-      <button class="filter-btn" data-filter="outros">OUTROS</button>
+        <!-- Os links da navbar (visíveis no desktop e no menu mobile) -->
+        <div class="nav-links" id="navLinks">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+          </div>
+          <div class="nav-item">
+            <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+          </div>
+          <div class="nav-item">
+            <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- --------------------- Botões filtro --------------------- -->
+      <div class="filtros">
+        <button class="filter-btn active" data-filter="all">TODOS</button>
+        <button class="filter-btn" data-filter="branding">BRANDING</button>
+        <button class="filter-btn" data-filter="audiovisual">AUDIOVISUAL</button>
+        <button class="filter-btn" data-filter="uxui">UX&UI</button>
+        <button class="filter-btn" data-filter="redes">REDES SOCIAIS</button>
+        <button class="filter-btn" data-filter="editorial">EDITORIAL</button>
+        <button class="filter-btn" data-filter="outros">OUTROS</button>
+      </div>
+      <!-- --------------------- Grelha projetos --------------------- -->
+      <div class="grid-projetos">
+        <a href="ccdm.html" class="projeto branding">
+          <img src="img/ccdm.png" alt="Projeto 1">
+        </a>
+        <a href="centrodamoda.html" class="projeto branding">
+          <img src="img/centromoda.png" alt="Projeto 2">
+        </a>
+        <a href="souberbuddy.html" class="projeto uxui">
+          <img src="img/soberbudy.png" alt="Projeto 3">
+        </a>
+        <a href="ultimorecurso.html" class="projeto branding redes">
+          <img src="img/ultimorecurso.png" alt="Projeto 1">
+        </a>
+        <a href="cabecaoca.html" class="projeto audiovisual">
+          <img src="img/cabecaoca.png" alt="Projeto 2">
+        </a>
+        <a href="ciaac.html" class="projeto branding redes">
+          <img src="img/ciaac.png" alt="Projeto 3">
+        </a>
+
+        <a href="tapetedememorias.html" class="projeto audiovisual">
+          <img src="img/tapetedememorias.png" alt="Projeto 1">
+        </a>
+        <a href="dzainit.html" class="projeto redes">
+          <img src="img/dzainit.png" alt="Projeto 2">
+        </a>
+        <a href="thebeachhouse.html" class="projeto uxui outros">
+          <img src="img/thebeachhouse.png" alt="Projeto 3">
+        </a>
+        <a href="tictac.html" class="projeto uxui editorial">
+          <img src="img/tictac.png" alt="Projeto 1">
+        </a>
+        <a href="p3.html" class="projeto editorial uxui">
+          <img src="img/p3.png" alt="Projeto 2">
+        </a>
+        <a href="jekforms.html" class="projeto uxui">
+          <img src="img/jekforms.png" alt="Projeto 3">
+        </a>
+
+        <a href="clickthefuture.html" class="projeto redes">
+          <img src="img/clickthefuture.png" alt="Projeto 1">
+        </a>
+        <a href="acapella.html" class="projeto branding">
+          <img src="img/acapella.png" alt="Projeto 2">
+        </a>
+        <a href="theshapeofemotions.html" class="projeto outros">
+          <img src="img/shapeofemotions.png" alt="Projeto 3">
+        </a>
+        <a href="passaporte.html" class="projeto branding">
+          <img src="img/passaporte.png" alt="Projeto 1">
+        </a>
+        <a href="pontoaponto.html" class="projeto branding">
+          <img src="img/pontoaponto.png" alt="Projeto 2">
+        </a>
+        <a href="quebrajazz.html" class="projeto branding">
+          <img src="img/quebrajazz.png" alt="Projeto 3">
+        </a>
+
+        <a href="natashajen.html" class="projeto branding">
+          <img src="img/natasha.png" alt="Projeto 1">
+        </a>
+        <a href="torrealgarve.html" class="projeto audiovisual">
+          <img src="img/torre.png" alt="Projeto 2">
+        </a>
+        <a href="sddh.html" class="projeto redes">
+          <img src="img/sddh.png" alt="Projeto 3">
+        </a>
+      </div>
+
+
+
     </div>
-    <!-- --------------------- Grelha projetos --------------------- -->
-    <div class="grid-projetos">
-      <a href="ccdm.html" class="projeto branding">
-        <img src="img/ccdm.png" alt="Projeto 1">
-      </a>
-      <a href="centrodamoda.html" class="projeto branding">
-        <img src="img/centromoda.png" alt="Projeto 2">
-      </a>
-      <a href="souberbuddy.html" class="projeto uxui">
-        <img src="img/soberbudy.png" alt="Projeto 3">
-      </a>
-      <a href="ultimorecurso.html" class="projeto branding redes">
-        <img src="img/ultimorecurso.png" alt="Projeto 1">
-      </a>
-      <a href="cabecaoca.html" class="projeto audiovisual">
-        <img src="img/cabecaoca.png" alt="Projeto 2">
-      </a>
-      <a href="ciaac.html" class="projeto branding redes">
-        <img src="img/ciaac.png" alt="Projeto 3">
-      </a>
-
-      <a href="tapetedememorias.html" class="projeto audiovisual">
-        <img src="img/tapetedememorias.png" alt="Projeto 1">
-      </a>
-      <a href="dzainit.html" class="projeto redes">
-        <img src="img/dzainit.png" alt="Projeto 2">
-      </a>
-      <a href="thebeachhouse.html" class="projeto uxui outros">
-        <img src="img/thebeachhouse.png" alt="Projeto 3">
-      </a>
-      <a href="tictac.html" class="projeto uxui editorial">
-        <img src="img/tictac.png" alt="Projeto 1">
-      </a>
-      <a href="p3.html" class="projeto editorial uxui">
-        <img src="img/p3.png" alt="Projeto 2">
-      </a>
-      <a href="jekforms.html" class="projeto uxui">
-        <img src="img/jekforms.png" alt="Projeto 3">
-      </a>
-
-      <a href="clickthefuture.html" class="projeto redes">
-        <img src="img/clickthefuture.png" alt="Projeto 1">
-      </a>
-      <a href="acapella.html" class="projeto branding">
-        <img src="img/acapella.png" alt="Projeto 2">
-      </a>
-      <a href="theshapeofemotions.html" class="projeto outros">
-        <img src="img/shapeofemotions.png" alt="Projeto 3">
-      </a>
-      <a href="passaporte.html" class="projeto branding">
-        <img src="img/passaporte.png" alt="Projeto 1">
-      </a>
-      <a href="pontoaponto.html" class="projeto branding">
-        <img src="img/pontoaponto.png" alt="Projeto 2">
-      </a>
-      <a href="quebrajazz.html" class="projeto branding">
-        <img src="img/quebrajazz.png" alt="Projeto 3">
-      </a>
-
-      <a href="natashajen.html" class="projeto branding">
-        <img src="img/natasha.png" alt="Projeto 1">
-      </a>
-      <a href="torrealgarve.html" class="projeto audiovisual">
-        <img src="img/torre.png" alt="Projeto 2">
-      </a>
-      <a href="sddh.html" class="projeto redes">
-        <img src="img/sddh.png" alt="Projeto 3">
-      </a>
-    </div>
-
-   
-
-  </div>
   </div>
 
-   <!-- --------------------- footer --------------------- -->
-    <footer class="footer">
-      WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
-    </footer>
+  <!-- --------------------- footer --------------------- -->
+  <footer class="footer">
+    WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
+  </footer>
   <script src="script.js"></script>
 </body>
 

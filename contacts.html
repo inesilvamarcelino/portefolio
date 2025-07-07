@@ -1,176 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Contactos | Portefólio Inês Marcelino</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 80px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos | Portefólio Inês Marcelino</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid #ccc;
+    }
 
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
 
-        .contact-title {
-            font-size: 2em;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
+    .nav-item a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: black;
+      transition: all 0.3s ease;
+    }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            font-family: 'Montserrat', sans-serif;
-        }
+    .content-wrapper {
+      margin-top: 120px;
+      padding: 20px;
+    }
 
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
 
-        .services-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
+    .contact-form,
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
 
-        .services-list li {
-            margin-bottom: 8px;
-        }
+    .contact-title {
+      font-size: 2em;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
 
-        .contact-details {
-            margin-top: 30px;
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        .contact-details p {
-            margin: 8px 0;
-        }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
 
-        .required::after {
-            content: "*";
-            color: red;
-            margin-left: 4px;
-        }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-        .submit-btn {
-            background-color: black;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    .form-group textarea {
+      height: 150px;
+      resize: vertical;
+    }
 
-        .submit-btn:hover {
-            background-color: #333;
-        }
-    </style>
+    .services-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .services-list li {
+      margin-bottom: 8px;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+    }
+
+    .contact-details p {
+      margin: 8px 0;
+    }
+
+    .required::after {
+      content: "*";
+      color: red;
+      margin-left: 4px;
+    }
+
+    .submit-btn {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.75em;
+      color: #333;
+      padding: 40px 20px 20px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .contact-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+
+    /* Animação do botão hambúrguer (opcional) */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-item">
-            <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
-        </div>
-        <div class="nav-item">
-            <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
-        </div>
-        <div class="nav-item">
-            <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
-        </div>
-    </nav>
-
-    <!-- Conteúdo da Página -->
-    <div class="content-wrapper">
-        <div class="contact-container">
-            <!-- Formulário -->
-            <div class="contact-form">
-                <h2 class="contact-title">QUERES UM ORÇAMENTO?</h2>
-                <form action="https://formsubmit.co/ines.silva.marcelino@gmail.com" method="POST">
-                    <div class="form-group">
-                        <label for="nome" class="required">NOME</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="required">EMAIL</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem" class="required">MENSAGEM</label>
-                        <textarea id="mensagem" name="mensagem" required></textarea>
-                    </div>
-
-                    <!-- Impede spam bots -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <!-- Redireciona para uma página de obrigado -->
-                    <input type="hidden" name="_next" value="https://teusite.com/obrigada.html">
-
-                    <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
-                </form>
-            </div>
-
-            <!-- Informações de Contacto -->
-            <div class="contact-info">
-                <h3>SERVIÇOS</h3>
-                <ul class="services-list">
-                    <li>Criação de logótipos</li>
-                    <li>Desenvolvimento de identidades visuais</li>
-                    <li>Design de packaging</li>
-                    <li>Design gráfico para redes sociais e impressos</li>
-                    <li>Design editorial (livros, revistas, catálogos)</li>
-                    <li>Edição e montagem de vídeo</li>
-                </ul>
-
-                <div class="contact-details">
-                    <h3>CONTACTOS</h3>
-                    <p>Fátima</p>
-                    <p>Coimbra</p>
-                    <p>ines.silva.marcelino@gmail.com</p>
-                    <p>+351 918 319 033</p>
-                    <p>LinkedIn</p>
-                    <p>Whatsapp</p>
-                </div>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <a href="index.html" class="nav-link" id="work-link">TRABALHOS</a>
+      </div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+      </div>
+      <div class="nav-item">
+        <a href="contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="footer">
-        WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
-    </footer>
+  <!-- Conteúdo -->
+  <div class="content-wrapper">
+    <div class="contact-container">
+      <!-- Formulário -->
+      <div class="contact-form">
+        <h2 class="contact-title">QUERES UM ORÇAMENTO?</h2>
+        <form action="https://formsubmit.co/ines.silva.marcelino@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="nome" class="required">NOME</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="required">EMAIL</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="mensagem" class="required">MENSAGEM</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+          </div>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://teusite.com/obrigada.html">
+          <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+        </form>
+      </div>
 
-    <!-- Script para navbar sticky -->
-    <script src="script.js"></script>
+      <!-- Info -->
+      <div class="contact-info">
+        <h3>SERVIÇOS</h3>
+        <ul class="services-list">
+          <li>Criação de logótipos</li>
+          <li>Desenvolvimento de identidades visuais</li>
+          <li>Design de packaging</li>
+          <li>Design gráfico para redes sociais e impressos</li>
+          <li>Design editorial (livros, revistas, catálogos)</li>
+          <li>Edição e montagem de vídeo</li>
+        </ul>
+
+        <div class="contact-details">
+          <h3>CONTACTOS</h3>
+          <p>Fátima</p>
+          <p>Coimbra</p>
+          <p>ines.silva.marcelino@gmail.com</p>
+          <p>+351 918 319 033</p>
+          <p>LinkedIn</p>
+          <p>Whatsapp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
+  </footer>
+
+  <!-- Script hambúrguer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
-
 </html>
