@@ -49,7 +49,11 @@ h1 {
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
   animation: drawLine 3s ease-out forwards;
+}
 
+.linha{
+  width: 100vw;   /* 100% da largura da viewport */
+  height: 75vh;  /* 100% da altura da viewport */
 }
 
 @keyframes drawLine {
@@ -189,6 +193,29 @@ h1 {
 
   .nav-item {
     margin: 0;
+  }
+ .linha {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* ou um valor maior se precisares que fique por cima */
+  }
+
+  #svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #linha {
+    stroke: black;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: drawLine 3s ease-out forwards;
   }
 }
 
@@ -396,4 +423,161 @@ h1 {
 
 .submit-btn:hover {
     background-color: #333;
+}
+
+
+/*ccdm*/
+/* Ajustes específicos para a página CCDM */
+
+/* Imagens dos mockups */
+.mockup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.mockup-wrapper img {
+  object-fit: cover;
+  height: 400px;
+}
+
+.mockup-wrapper img.cartaz {
+  flex: 2;
+  min-width: 280px;
+}
+
+.mockup-wrapper img.tote,
+.mockup-wrapper img.garrafa {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Responsivo para mockups */
+@media (max-width: 768px) {
+  .mockup-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mockup-wrapper img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+
+
+/*centro da moda*/
+
+.grid-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.grid-texto {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.grid-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Grelha de imagens */
+.moda-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.moda-grid .linha1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.moda-grid .linha2,
+.moda-grid .linha3 {
+  display: flex;
+  gap: 20px;
+}
+
+.moda-grid .linha2 img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.moda-grid .linha3 img {
+  width: calc(100% / 3);
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+/*---------------------*/
+.about-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+}
+
+.about-header {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.grid-texto p {
+  font-size: 1em;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.grid-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.grid-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .about-container {
+    margin-bottom: 60px;
+  }
+
+  .grid-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-logo {
+    text-align: center;
+  }
+
+  .moda-grid .linha2,
+  .moda-grid .linha3 {
+    flex-direction: column;
+  }
+
+  .moda-grid .linha2 img,
+  .moda-grid .linha3 img {
+    width: 100%;
+  }
 }

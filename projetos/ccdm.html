@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+
+<head>
+    <title>Portefólio Inês Marcelino</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .about-main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    .about-text-block {
+        flex: 1 1 300px;
+    }
+
+    .about-header {
+        font-size: 2em;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .about-image {
+        flex: 1 1 100px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 200px;
+        margin-bottom: 40px;
+    }
+
+    span {
+        font-weight: 550;
+    }
+
+    .about-section h3 {
+        font-size: 1.5em;
+        letter-spacing: 0.05em;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .about-section p,
+    .about-section ul {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 5px 0;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 0.75em;
+        color: #333;
+        padding: 40px 20px 20px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+    }
+
+    /* Garanta que o content-wrapper tenha o mesmo estilo no about.html */
+    .content-wrapper {
+        position: relative;
+        margin-top: 50px;
+        /* Igual ao index.html */
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: black;
+        transition: all 0.3s ease;
+    }
+
+    /* Conteúdo principal */
+    .content-wrapper,
+    .about-container {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Imagem */
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: white;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .about-main {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .about-grid {
+            gap: 40px;
+        }
+    }
+</style>
+
+
+<body>
+    <!-- ------------------------- Navbar ------------------------- -->
+
+    <nav class="navbar">
+        <!-- Ícone hambúrguer (só aparece no mobile) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Os links da navbar (visíveis no desktop e no menu mobile) -->
+        <div class="nav-links" id="navLinks">
+            <div class="nav-item">
+                <a href="../index.html" class="nav-link" id="work-link">TRABALHOS</a>
+            </div>
+            <div class="nav-item">
+                <a href="../about.html" class="nav-link" id="about-link">SOBRE MIM</a>
+            </div>
+            <div class="nav-item">
+                <a href="../contacts.html" class="nav-link" id="contacts-link">CONTACTOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------------------- sobre mim ------------------------- -->
+    <div class="about-container">
+        <h2 class="about-header">CCDM</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 60px;">
+
+            <!-- Texto -->
+            <div style="flex: 2; min-width: 280px;">
+                <p>
+                    Projeto desenvolvido para a cadeira de “Projeto 1 – Identidade na web” cujo o objetivo era criar uma
+                    identidade dinâmica e aplicá-la num site sobre um evento anual chamado “Ciclo de conversas de design
+                    e
+                    multimédia”. Para este projeto decidimos ir de encontro a uma imagem que representasse o processo de
+                    design. Processo este que é muitas vezes sobre o recomeçar, sobre experimentar vezes sem conta. O
+                    amarfanhar, o rasgar, o deformar que vem muitas vezes implícito neste recomeço com a frustração do
+                    designer.
+                </p>
+                <p>
+                    Trabalho realizado com Moira Premolli, Francisca Pires e Helena Guterres.
+                </p>
+            </div>
+
+            <!-- Logótipo -->
+            <div style="flex: 1; min-width: 180px; text-align: center;">
+                <img src="../img/ccdm-logo.png" alt="Logótipo CCDM"
+                    style="width: 100%; max-width: 180px; height: auto;">
+            </div>
+        </div>
+
+        <!-- Imagens dos mockups -->
+        <!-- Imagens dos mockups -->
+        <div class="mockup-wrapper">
+            <img src="../img/ccdm-cartaz.png" alt="Cartaz CCDM" class="cartaz">
+            <img src="../img/ccdm-tote.png" alt="Tote Bag CCDM" class="tote">
+            <img src="../img/ccdm-garrafa.png" alt="Garrafa CCDM" class="garrafa">
+        </div>
+
+
+        <!-- Vídeo embebido -->
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://www.youtube-nocookie.com/embed/Fgi8CQAy-nQ" frameborder="0" allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            </iframe>
+        </div>
+
+
+    </div>
+
+
+    <footer class="footer">
+        WEBSITE DESIGNED AND DEVELOPED BY INÊS MARCELINO
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
